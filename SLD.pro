@@ -25,10 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    cabletabwidget.cpp \
+    cableprops.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    cabletabwidget.h \
+    cableprops.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    cabletabwidget.ui \
+    cableprops.ui

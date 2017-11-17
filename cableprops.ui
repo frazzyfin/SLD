@@ -1,21 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>CableProps</class>
  <widget class="QWidget" name="CableProps">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>240</width>
+    <height>76</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="horizontalSpacing">
+      <number>18</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>6</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="lblConductorSize">
+       <property name="text">
+        <string>Conductor Size:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="cmbConductorSize">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="maxVisibleItems">
+        <number>21</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>120 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>150 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>185 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>240 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>300 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>400 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>500 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>630 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>800 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1000 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1200 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1600 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2000 mm²</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2500 mm²</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="layoutConductorMaterial">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lblConductorMaterial">
+       <property name="text">
+        <string>Material:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>67</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radCopper">
+       <property name="text">
+        <string>Cu</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QRadioButton" name="radAluminium">
+       <property name="text">
+        <string>Al</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>
