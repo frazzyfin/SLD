@@ -29,18 +29,21 @@ SOURCES += \
     cabletabwidget.cpp \
     cableprops.cpp \
         nodewidget.cpp \
-    minorsectionwidget.cpp
+    minorsectionwidget.cpp \
+    sectionlabelswidget.cpp
 
 HEADERS += \
         mainwindow.h \
     cabletabwidget.h \
     cableprops.h \
         nodewidget.h \
-    minorsectionwidget.h
+    minorsectionwidget.h \
+    sectionlabelswidget.h
 
 FORMS += \
         mainwindow.ui \
     cabletabwidget.ui \
     cableprops.ui \
         nodewidget.ui \
-    minorsectionwidget.ui
+    minorsectionwidget.ui \
+    sectionlabelswidget.ui
