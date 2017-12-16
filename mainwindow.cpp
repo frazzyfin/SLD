@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "nodewidget.h"
+#include "minorsectionwidget.h"
 #include <vector>
 #include <string>
 
@@ -30,11 +31,31 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     // Add a spacer so the nodes are neatly placed at the top
-    auto spacer = new QSpacerItem(1, 1, QSizePolicy::Expanding, QSizePolicy::Expanding);
-    nodesVLayout->addSpacerItem(spacer);
+    auto nodeSpacer = new QSpacerItem(1, 1, QSizePolicy::Expanding, QSizePolicy::Expanding);
+    nodesVLayout->addSpacerItem(nodeSpacer);
+
+    // Add the minor section area - this is another vertical layout
+    auto minSectionVLayout = new QVBoxLayout;
+    auto minorSectionList = new vector<MinorSectionWidget*>;
+
+    for (int i = 0; i < 19; i++)
+    {
+        auto section = new MinorSectionWidget();
+        minorSectionList->push_back(section);
+        minSectionVLayout->addWidget(section);
+    }
+
+    // Add a spacer so the nodes are neatly placed at the top
+    auto sectionSpacer = new QSpacerItem(1, 1, QSizePolicy::Expanding, QSizePolicy::Expanding);
+    minSectionVLayout->addSpacerItem(sectionSpacer);
+
+    // Add the section and nodes to a horizontal layout which are then added to the parent scroll box
+    auto nodeSectionHLayout = new QHBoxLayout;
+    nodeSectionHLayout->insertLayout(0, nodesVLayout);
+    nodeSectionHLayout->insertLayout(1, minSectionVLayout);
 
     // And finally add the layout to parent scroll box
-    ui->scrlNodesList->setLayout(nodesVLayout);
+    ui->scrlNodesList->setLayout(nodeSectionHLayout);
 }
 
 MainWindow::~MainWindow()
