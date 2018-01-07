@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "nodewidget.h"
 #include "minorsectionwidget.h"
+#include "sectionlabelswidget.h"
 #include <vector>
 #include <string>
 
@@ -20,6 +21,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Setup the initial nodes list
     auto nodesVLayout = new QVBoxLayout;
+
+    // First add the labels at the top
+    auto nodeLabels = new SectionLabelsWidget();
+    nodesVLayout->addWidget(nodeLabels);
+
+    // Then add the nodes
     auto nodesList = new vector<NodeWidget*>();
     for (int i = 0; i < 20; i++)
     {

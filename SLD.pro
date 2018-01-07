@@ -30,7 +30,8 @@ SOURCES += \
     cableprops.cpp \
         nodewidget.cpp \
     minorsectionwidget.cpp \
-    sectionlabelswidget.cpp
+    sectionlabelswidget.cpp \
+    nodelabelswidget.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,7 +39,8 @@ HEADERS += \
     cableprops.h \
         nodewidget.h \
     minorsectionwidget.h \
-    sectionlabelswidget.h
+    sectionlabelswidget.h \
+    nodelabelswidget.h
 
 FORMS += \
         mainwindow.ui \
@@ -46,4 +48,5 @@ FORMS += \
     cableprops.ui \
         nodewidget.ui \
     minorsectionwidget.ui \
-    sectionlabelswidget.ui
+    sectionlabelswidget.ui \
+    nodelabelswidget.ui
